@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "algosdk": "^2.7.0",
-    "crypto": "^1.0.1"
-  }
-}

@@ -1,6 +1,5 @@
 import express from 'express';
-import algosdk from 'algosdk';
-import {getAddress} from '../controllers/addressController';
+import {getAddress} from '../controllers/addressController.js';
 
 
 const router = express.Router();
