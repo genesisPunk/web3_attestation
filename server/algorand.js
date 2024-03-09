@@ -26,12 +26,3 @@ async function checkConnectionStatus() {
 
 checkConnectionStatus();
 
-/*
-export const algodClient = new algosdk.Algodv2({
-  'X-API-Key': apiKey,
-  baseServer: algodServer,
-  port: 443
-});
-
-
-*/

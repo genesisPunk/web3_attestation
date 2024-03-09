@@ -15,9 +15,7 @@ app.use('/', getAddress)
 app.use('/', issueText)
  app.use('/', verifyText)
 
-// mongoose.connect(CONNECTION_URL)
 
-
- app.listen(5001, ()=> console.log('Server is running on port: 5000'))
+ app.listen(5001, ()=> console.log('Server is running on port: 5001'))
 
 
