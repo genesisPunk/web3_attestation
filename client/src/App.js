@@ -1,12 +1,14 @@
-import React, {Component} from 'react';
+import React, {Component, useContext} from 'react';
 import './App.css';
 import {Stepper, StepLabel, Step} from '@mui/material';
+import { multiStepContext } from './StepContext.js';
 import GetAddressStep from './Components/GetAddressStep.js';
 import IssueDataStep from  './Components/IssueDataStep.js';
 import VerifyDataStep from './Components/VerifyDataStep.js';
 
 function App() {
 
+  const {currentStep}  = useContext(multiStepContext);
 function showStep(step) {
   switch(step) {
     case 1:
@@ -25,7 +27,7 @@ function showStep(step) {
       <header className="App-header">
         <h3 style={{color:'red', textDecoration:'underline'}}>Web attestation</h3>
         <div className='center-stepper'>
-          <Stepper style={{width:'18%'}} activeStep='1' orientation='horizontal'>
+          <Stepper style={{width:'18%'}} activeStep= {currentStep - 1} orientation='horizontal'>
             <Step>
               <StepLabel></StepLabel>
             </Step>
@@ -37,7 +39,7 @@ function showStep(step) {
             </Step>
           </Stepper>
           </div>
-          { showStep(1) }
+          { showStep(currentStep) }
       </header>
     </div>
   );
